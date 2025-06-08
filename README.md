@@ -1,31 +1,36 @@
-Este proyecto tiene como objetivo resolver problemáticas clave en la administración de una floristería mediante el desarrollo de un software personalizado que permita gestionar de forma eficiente:
 
-📅 Agenda de pedidos
+# 🌸 Sistema de Gestión para Floristería ESTEFANIACREA
 
-📦 Control de inventario
+---
 
-📈 Historial de ventas
+## 💡 Objetivo
+Desarrollar un sistema de gestión personalizado que permita optimizar los procesos administrativos de la floristería **ESTEFANIACREA**, enfocándose en:
 
-📊 Generación de reportes
+- 📅 Agenda de pedidos
+- 📦 Control de inventario
+- 📈 Historial de ventas
+- 📊 Generación de reportes
 
-🎯 Problema detectado
-Antes del desarrollo de este sistema, la floristería enfrentaba limitaciones importantes en su operación diaria:
+---
 
-Los pedidos se registraban manualmente en libretas, lo que provocaba olvidos y errores.
+## 📋 Problemática detectada
+Antes de la implementación del software, la floristería enfrentaba varios retos:
 
-El control de inventario se llevaba de manera informal, dificultando la reposición oportuna de productos.
+- Los pedidos se anotaban en libretas, y a veces se olvidaban.
+- El inventario se controlaba de forma informal.
+- No se llevaba un historial de ventas.
+- No existían reportes para evaluar el desempeño del negocio.
 
-No existía un historial estructurado de ventas, impidiendo el análisis de patrones de consumo.
+Esto dificultaba la organización, la atención al cliente y la toma de decisiones basada en datos.
 
-Los reportes eran inexistentes o poco confiables, lo que afectaba la toma de decisiones.
+---
 
-✅ Solución propuesta
-Se desarrolló una herramienta digital intuitiva que automatiza procesos clave y mejora significativamente la organización interna. El sistema permite:
+## ✅ Solución propuesta
+El sistema desarrollado permite:
 
-Registrar y consultar pedidos con fechas y detalles del cliente.
+- Registrar pedidos con fecha, cliente y estado.
+- Controlar productos en inventario y su disponibilidad.
+- Consultar ventas pasadas.
+- Generar reportes automáticos para análisis.
 
-Llevar control de existencias de productos en tiempo real.
-
-Almacenar y visualizar el historial de ventas por fechas o productos.
-
-Generar reportes detallados para análisis de desempeño.
+Todo desde una interfaz fácil de usar y accesible.
