@@ -7,10 +7,15 @@ from PIL import Image, ImageTk
 from util.db_utils.consultas_db import obtener_conexion
 from formularios.form_master import FormularioMaster
 
+import platform
+
 root = tk.Tk()
 root.title('ESTEFANIA CREA')
-root.state('zoomed')  # Maximiza la ventana al iniciarse
-root.resizable(False, False)  # Evita que la ventana sea ajustable
+if platform.system() == 'Windows':
+    root.state('zoomed')  # Maximiza la ventana al iniciarse
+else:
+    root.attributes('-zoomed', True)  # Maximiza la ventana al iniciarse en otros sistemas operativos
+#root.resizable(False, False)  # Evita que la ventana sea ajustable
 
 font_name = "Inter"
 
@@ -54,7 +59,7 @@ def on_leave_email(e):
 
 # Funciones para manejar la entrada de contraseña
 def on_enter_password(e):
-    pass_entry.delete(0, "●")  # Borra el texto de entrada al hacer clic
+    pass_entry.delete(0, "end")  # Borra el texto de entrada al hacer clic
 
 def on_leave_password(e):
     if pass_entry.get() == "":

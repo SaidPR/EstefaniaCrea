@@ -1,6 +1,4 @@
-import tkinter as tk
-import os
-import sys
+import tkinter as tk, os, sys, platform
 from tkinter import font
 from config import COLOR_ONBUTTON, COLOR_PRINCIPAL, COLOR_SIDEBAR, COLOR_TOP
 import util.util_imgs as util_img
@@ -16,13 +14,12 @@ class FormularioMaster(tk.Tk):
     def __init__(self):
         super().__init__()
         # Función para obtener la ruta correcta de las imágenes
-        def obtener_ruta_imagen(imagen):
-            if getattr(sys, 'frozen', False):  # Si está empaquetado con PyInstaller
+        def obtener_ruta_imagen(rel_path):
+            if getattr(sys, 'frozen', False):  # Si está empaquetado (ejecutable)
                 base_path = sys._MEIPASS
-            else:  # Ruta normal en desarrollo
-                base_path = os.path.abspath(os.path.dirname(__file__))
-            ruta_completa = os.path.join(base_path, imagen)
-            return ruta_completa
+            else:
+                base_path = os.path.abspath('.')
+            return os.path.join(base_path, rel_path)
 
         # Cargar imágenes con la ruta correcta
         logo_path = obtener_ruta_imagen("imgs/logoEmp.jpg")
@@ -41,7 +38,10 @@ class FormularioMaster(tk.Tk):
 
     def config_window(self):
         self.title("Estefania Crea")
-        self.state("zoomed")
+        if platform.system() == 'Windows':
+            self.state('zoomed')  # Maximiza la ventana al iniciarse
+        else:
+            self.attributes('-zoomed', True)  # Maximiza la ventana al iniciarse en otros sistemas operativos
         self.resizable(False, False)
         w, h = 1366, 768
         util_win.centrar_ventana(self, w, h)
