@@ -1,0 +1,6 @@
+babel==2.17.0
+charset-normalizer==3.4.2
+fpdf==1.7.2
+pillow==11.3.0
+reportlab==4.4.2
+tkcalendar==1.6.1
